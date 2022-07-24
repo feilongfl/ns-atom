@@ -6,11 +6,11 @@ jobs:
     name: build pkg
     steps:
       - uses: actions/checkout@v3
-      # - name: build pkg
-      #   id: build
-      #   uses: ./.github/actions/build
-      #   with:
-      #     version: 'v0.0.2'
+      - name: build pkg
+        id: build
+        uses: ./.github/actions/build
+        with:
+          version: 'v0.0.2'
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -18,4 +18,5 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
+            out/*
             LICENSE
