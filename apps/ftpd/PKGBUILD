@@ -1,0 +1,14 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("ftpd")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=3.1.0
+pkgrel=1
+source=(
+      "ftpd.nro.xz::https://github.com/mtheall/ftpd/releases/download/v3.1.0/ftpd.nro.xz"
+)
+arch=("any")
+
+package() {
+	install -Dm755 "${srcdir}/ftpd.nro" "${pkgdir}/switch/ftpd.nro"
+}
+md5sums=('07caf6f607873ff0ec6ad2fd6b14f3c8')
