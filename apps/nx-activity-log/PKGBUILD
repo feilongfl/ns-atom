@@ -1,0 +1,14 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("nx-activity-log")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.4.0
+pkgrel=1
+source=(
+        "nx-activity-log.nro::https://github.com/tallbl0nde/NX-Activity-Log/releases/download/v1.4.0/NX-Activity-Log.nro"
+)
+arch=("any")
+
+package() {
+	install -Dm755 "${srcdir}/nx-activity-log.nro" "${pkgdir}/switch/nx-activity-log.nro"
+}
+md5sums=('2a16ea35e240a5e3c3fca1a0550b4e1c')
