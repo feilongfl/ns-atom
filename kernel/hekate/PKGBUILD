@@ -1,0 +1,22 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=hekate_ctcaer
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=5.8.0
+pkgrel=1
+source=(
+      "hekate_ctcaer_Nyx.zip::https://github.com/CTCaer/hekate/releases/download/v${pkgver}/${pkgname}_${pkgver}_Nyx_1.3.0.zip"
+)
+arch=("any")
+
+package() {
+	install -Dm755 "${srcdir}/${pkgname}_${pkgver}.bin" "${pkgdir}/payload.bin"
+	install -Dm755 "${srcdir}/${pkgname}_${pkgver}.bin" "${pkgdir}/bootloader/update.bin"
+
+	install -Dm755 "${SRCPKGDEST}/hekate/hekate_ipl.ini" "${pkgdir}/bootloader/hekate_ipl.ini"
+	install -Dm755 "${SRCPKGDEST}/hekate/res/icon_atmosphere.bmp" "${pkgdir}/bootloader/res/icon_atmosphere.bmp"
+	install -Dm755 "${SRCPKGDEST}/hekate/res/icon_stock.bmp" "${pkgdir}/bootloader/res/icon_stock.bmp"
+
+	install -Dm755 "${SRCPKGDEST}/sx_gear/boot.dat" "${pkgdir}/boot.dat"
+	install -Dm755 "${SRCPKGDEST}/sx_gear/boot.ini" "${pkgdir}/boot.ini"
+}
+md5sums=('06e619aefde4a8bf96149254332365f2')

@@ -1,0 +1,29 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("atomspheer")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.3.2
+pkgrel=1
+source=(
+      "atomspheer.zip::https://github.com/Atmosphere-NX/Atmosphere/releases/download/${pkgver}/atmosphere-${pkgver}-master-e96972c93+hbl-2.4.1+hbmenu-3.5.1.zip"
+)
+arch=("any")
+
+build() {
+	cp ${srcdir}/atmosphere/config_templates/exosphere.ini ${srcdir}/exosphere.ini
+	sed -i -e 's/blank_prodinfo_sysmmc=0/blank_prodinfo_sysmmc=1/' -e 's/blank_prodinfo_emummc=0/blank_prodinfo_emummc=1/' ${srcdir}/exosphere.ini
+
+	cp ${srcdir}/atmosphere/config_templates/system_settings.ini ${srcdir}/atmosphere/config/system_settings.ini
+	sed -i -e 's/; dmnt_cheats_enabled_by_default = u8!0x1/dmnt_cheats_enabled_by_default = u8!0x0/' ${srcdir}/atmosphere/config/system_settings.ini
+}
+
+package() {
+	pushd ${srcdir}
+	find
+	find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+	popd
+	# install -Dm755 "${srcdir}/${pkgname}_${pkgver}.bin" "${pkgdir}/payload.bin"
+
+	# patch hosts
+	install -Dm755 "${SRCPKGDEST}/hosts.txt" "${pkgdir}/atmosphere/hosts/default.txt"
+}
+md5sums=('ab88244cdb760780d3d88ada23d52c08')
