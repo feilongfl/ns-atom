@@ -1,0 +1,18 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("tinfoil")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.3.4
+pkgrel=1
+source=(
+      "tinfoil.zip::https://tinfoil.media/repo/Tinfoil%20Self%20Installer%20%5B050000BADDAD0000%5D%5B14.0%5D%5Bv0%5D.zip"
+)
+arch=("any")
+
+package() {
+      pushd ${srcdir}/switch
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/switch/{}" \;
+      popd
+
+      install -Dm755 ${SRCPKGDEST}/tinfoil-locations.conf ${pkgdir}/switch/tinfoil/locations.conf
+}
+md5sums=('319ecea41dad8707a6aa8eddd604c6a0')
