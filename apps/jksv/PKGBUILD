@@ -6,7 +6,7 @@ pkgrel=1
 github=J-D-K/JKSV
 github_ignore=y
 source=(
-      "jksv.nro::https://github.com//releases/download/${pkgver}/JKSV.nro"
+      "jksv.nro::https://github.com/${github}/releases/download/${pkgver}/JKSV.nro"
 )
 arch=("any")
 
