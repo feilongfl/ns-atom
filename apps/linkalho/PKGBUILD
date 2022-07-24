@@ -1,0 +1,15 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("linkalho")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.0.6
+pkgrel=1
+github=rdmrocha/linkalho
+source=(
+    "linkalho.zip::https://github.com/${github}/releases/download/v${pkgver}/linkalho-v${pkgver}.zip"
+)
+arch=("any")
+
+package() {
+    install -Dm755 ${srcdir}/ ${pkgdir}/
+}
+md5sums=('f5ac442fbd21700eb5df0849bff003cf')
