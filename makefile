@@ -1,5 +1,5 @@
 
-VERSION?=v0.0.1
+VERSION?=0.0.1
 PKGCONF=$(realpath makepkg.conf)
 BUILDDIR=build
 OUTPUTDIR=out
