@@ -11,6 +11,7 @@ source=(
 arch=("any")
 
 package() {
-    install -Dm755 ${srcdir}/ ${pkgdir}/
+    install -Dm755 ${srcdir}/pplay/pplay.nro ${pkgdir}/switch/pplay/pplay.nro
+    install -Dm755 ${srcdir}/pplay/mpv/subfont.ttf ${pkgdir}/switch/pplay/mpv/subfont.ttf
 }
 md5sums=('8388959efeccbc3ab4f1eb2afbbf9a7c')
