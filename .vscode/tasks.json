@@ -11,6 +11,15 @@
                 "cwd": "${fileDirname}"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "makepkg",
+            "type": "shell",
+            "command": "makepkg --config ${workspaceFolder}/makepkg.conf",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": []
         }
     ]
 }
