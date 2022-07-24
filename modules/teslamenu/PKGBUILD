@@ -1,0 +1,16 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("telsa-menu")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.1.4
+pkgrel=1
+source=(
+        "telsamenu.zip::https://github.com/WerWolv/Tesla-Menu/releases/download/v1.1.4/ovlmenu.zip"
+)
+arch=("any")
+
+package() {
+    pushd ${srcdir}
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+    popd
+}
+md5sums=('d473204f733cc18374ef0624f751992d')
