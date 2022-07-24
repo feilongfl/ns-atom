@@ -1,0 +1,14 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("aio-switch-updater")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=2.19.2
+pkgrel=1
+source=(
+      "aio-switch-updater.zip::https://github.com/HamletDuFromage/aio-switch-updater/releases/download/${pkgver}/aio-switch-updater.zip"
+)
+arch=("any")
+
+package() {
+	install -Dm755 "${srcdir}/switch/aio-switch-updater/aio-switch-updater.nro" "${pkgdir}/switch/aio-switch-updater/aio-switch-updater.nro"
+}
+md5sums=('61688a966fa28d2f8f1ea21bf10a02f6')
