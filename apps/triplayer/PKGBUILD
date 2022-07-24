@@ -1,0 +1,17 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("triplayer")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.1.1
+pkgrel=1
+github=tallbl0nde/TriPlayer
+source=(
+    "triplayer.zip::https://github.com/${github}/releases/download/v${pkgver}/triplayer-${pkgver}.zip"
+)
+arch=("any")
+
+package() {
+    pushd ${srcdir}
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+    popd
+}
+md5sums=('271ba0468d06a2a7c1fea5369efc2008')
