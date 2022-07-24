@@ -10,6 +10,6 @@ source=(
 arch=("any")
 
 package() {
-    install -Dm755 ${srcdir}/ ${pkgdir}/
+    install -Dm755 ${srcdir}/linkalho.nro ${pkgdir}/switch/linkalho.nro
 }
 md5sums=('f5ac442fbd21700eb5df0849bff003cf')
