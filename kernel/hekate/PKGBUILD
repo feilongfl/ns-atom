@@ -9,6 +9,10 @@ source=(
 arch=("any")
 
 package() {
+    pushd ${srcdir}/bootloader
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/bootloader/{}" \;
+    popd
+
 	install -Dm755 "${srcdir}/${pkgname}_${pkgver}.bin" "${pkgdir}/payload.bin"
 	install -Dm755 "${srcdir}/${pkgname}_${pkgver}.bin" "${pkgdir}/bootloader/update.bin"
 
