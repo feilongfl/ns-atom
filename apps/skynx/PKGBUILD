@@ -1,0 +1,20 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("skynx")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.5
+pkgrel=1
+github=DevL0rd/SkyNX
+source=(
+    "skynx.zip::https://github.com/${github}/releases/download/v${pkgver}/SkyNX.zip"
+    "skynx_client.zip::https://github.com/${github}/releases/download/v${pkgver}/SkyNXStreamer-win32-ia32.zip"
+)
+arch=("any")
+
+noextract=("skynx_client.zip")
+
+package() {
+    install -Dm755 ${srcdir}/switch/SkyNX/SkyNX.nro ${pkgdir}/switch/SkyNX/SkyNX.nro
+    install -Dm755 ${SRCPKGDEST}/skynx_client.zip ${pkgdir}/apps/skynx_client.zip
+}
+md5sums=('b5d785ecc8a07324cab9c8e5206cbf05'
+         '42f8a2f6b424353895357ca8f2dbd79b')
