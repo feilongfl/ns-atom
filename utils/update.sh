@@ -18,6 +18,12 @@ fi
 url="https://api.github.com/repos/${github}/releases/latest"
 pkgver=$(curl -s ${url} | jq -r '.tag_name' | sed -e "s/^v//" -e "s/-/%2D/g")
 
+if [ "${pkgver}" = "null" ]
+then
+    echo "pkgver get failed, exit..."
+    exit
+fi
+
 sed -i -e "s/pkgver=.*/pkgver=${pkgver}/" $1
 echo $1 =\> ${pkgver}
 
