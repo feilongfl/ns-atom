@@ -1,0 +1,15 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("tencent-switch-gui")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=0.1.1
+pkgrel=1
+github=CaiMiao/Tencent-switcher-GUI
+source=(
+    "tencent-switcher-gui.nro::https://github.com/${github}/releases/download/${pkgver}/tencent-switcher-gui.nro"
+)
+arch=("any")
+
+package() {
+    install -Dm755 ${srcdir}/tencent-switcher-gui.nro ${pkgdir}/switch/tencent-switcher-gui.nro
+}
+md5sums=('6fa0660ffdccf3e7e5cbe197f4fbb0b7')
