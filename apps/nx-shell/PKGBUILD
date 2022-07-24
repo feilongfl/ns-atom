@@ -3,8 +3,9 @@ pkgname=("nx-shell")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=3.20
 pkgrel=1
+github=joel16/NX-Shell
 source=(
-        "nx-shell.nro::https://github.com/joel16/NX-Shell/releases/download/3.20/NX-Shell.nro"
+    "nx-shell.nro::https://github.com/${github}/releases/download/${pkgver}/NX-Shell.nro"
 )
 arch=("any")
 
