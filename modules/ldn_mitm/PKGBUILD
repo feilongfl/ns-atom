@@ -1,0 +1,16 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("ldn_mitm")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.12.0
+pkgrel=1
+source=(
+      "ldn_mitm.zip::https://github.com/spacemeowx2/ldn_mitm/releases/download/v1.12.0/ldn_mitm_v1.12.0.zip"
+)
+arch=("any")
+
+package() {
+	pushd ${srcdir}
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+      popd
+}
+md5sums=('ef44053d9c155ffc680b6d1b3cfd6595')
