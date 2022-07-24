@@ -1,0 +1,16 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("missioncontrol")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=1.12.0
+pkgrel=1
+source=(
+      "missioncontrol.zip::https://github.com/ndeadly/MissionControl/releases/download/v0.6.3/MissionControl-0.6.3-master-23f3437.zip"
+)
+arch=("any")
+
+package() {
+	pushd ${srcdir}
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+      popd
+}
+md5sums=('824b7caaf8c4a288bc3f214a548101f5')
