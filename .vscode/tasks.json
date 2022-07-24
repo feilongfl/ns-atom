@@ -15,7 +15,7 @@
         {
             "label": "makepkg",
             "type": "shell",
-            "command": "makepkg --config ${workspaceFolder}/makepkg.conf",
+            "command": "makepkg --config ${workspaceFolder}/makepkg.conf -f",
             "options": {
                 "cwd": "${fileDirname}"
             },
