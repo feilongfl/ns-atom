@@ -3,8 +3,11 @@ pkgname=hekate_ctcaer
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=5.8.0
 pkgrel=1
+github=CTCaer/hekate
+github_assert_jqmatcher=".assets[0].name"
+github_assert=hekate_ctcaer_5.8.0_Nyx_1.3.0.zip
 source=(
-      "hekate_ctcaer_Nyx.zip::https://github.com/CTCaer/hekate/releases/download/v${pkgver}/${pkgname}_${pkgver}_Nyx_1.3.0.zip"
+      "hekate_ctcaer_Nyx.zip::https://github.com/${github}/releases/download/v${pkgver}/${github_assert}"
 )
 arch=("any")
 
