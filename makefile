@@ -14,6 +14,9 @@ ${OUTPUTPATH}: pkgbuild
 pkgbuild:
 	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && makepkg --config ${PKGCONF} && popd' \;
 
+updpkgsums:
+	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && updpkgsums && popd' \;
+
 clean:
 	git clean -xfd
 
