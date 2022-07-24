@@ -20,3 +20,9 @@ pkgver=$(curl ${url} | jq -r '.tag_name' | sed -e "s/^v//")
 
 sed -i -e "s/pkgver=.*/pkgver=${pkgver}/" $1
 echo $1 =\> ${pkgver}
+
+if [ ! -z "${github_assert_jqmatcher}" ]
+then
+    github_assert=$(curl ${url} | jq -r ${github_assert_jqmatcher})
+    sed -i -e "s/github_assert=.*/github_assert=${github_assert}/" $1
+fi
