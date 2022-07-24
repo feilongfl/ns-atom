@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+    name: build pkg
+    steps:
+      - uses: actions/checkout@v3
+      # - name: build pkg
+      #   id: build
+      #   uses: ./.github/actions/build
+      #   with:
+      #     version: 'v0.0.2'
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "beta"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            LICENSE

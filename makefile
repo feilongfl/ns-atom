@@ -1,8 +1,9 @@
 
+VERSION?=v0.0.1
 PKGCONF=$(realpath makepkg.conf)
 BUILDDIR=build
 OUTPUTDIR=out
-OUTPUTFILE=sd.zip
+OUTPUTFILE=nt-atom-v${VERSION}.zip
 OUTPUTPATH=${OUTPUTDIR}/${OUTPUTFILE}
 
 ${OUTPUTPATH}: pkgbuild
