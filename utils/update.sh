@@ -16,13 +16,13 @@ fi
 
 # check update
 url="https://api.github.com/repos/${github}/releases/latest"
-pkgver=$(curl ${url} | jq -r '.tag_name' | sed -e "s/^v//")
+pkgver=$(curl -s ${url} | jq -r '.tag_name' | sed -e "s/^v//" -e "s/-/%2D/g")
 
 sed -i -e "s/pkgver=.*/pkgver=${pkgver}/" $1
 echo $1 =\> ${pkgver}
 
 if [ ! -z "${github_assert_jqmatcher}" ]
 then
-    github_assert=$(curl ${url} | jq -r ${github_assert_jqmatcher})
+    github_assert=$(curl -s ${url} | jq -r ${github_assert_jqmatcher})
     sed -i -e "s/github_assert=.*/github_assert=${github_assert}/" $1
 fi

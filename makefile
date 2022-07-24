@@ -17,7 +17,12 @@ pkgbuild:
 updpkgsums:
 	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && updpkgsums && popd' \;
 
+update_github:
+	find . -name "PKGBUILD" -exec utils/update.sh {} \;
+
+update: update_github updpkgsums
+
 clean:
 	git clean -xfd
 
-.PHONY: clean pkgbuild
+.PHONY: clean pkgbuild updpkgsums update
