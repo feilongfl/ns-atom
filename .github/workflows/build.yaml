@@ -10,7 +10,7 @@ jobs:
         id: build
         uses: ./.github/actions/build
         with:
-          version: 'v0.0.2'
+          version: '${{ github.run_number }}.${{ github.run_attempt }}'
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -18,5 +18,6 @@ jobs:
           prerelease: true
           title: "${{ github.run_number }}.${{ github.run_attempt }}"
           files: |
-            out/*
+            out/nt-atom-v${{ github.run_number }}.${{ github.run_attempt }}.zip
+            out/checksum.md5
             LICENSE
