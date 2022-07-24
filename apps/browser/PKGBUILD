@@ -1,0 +1,15 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("browserNX")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=0.4.1
+pkgrel=1
+source=(
+      "browserNX.zip::https://github.com/crc-32/BrowseNX/releases/download/v0.4.1/BrowseNX.zip"
+)
+arch=("any")
+
+package() {
+	install -Dm755 "${srcdir}/switch/Browser.nro" "${pkgdir}/switch/Browser.nro"
+	# install -Dm755 "${srcdir}/Browser.nsp" "${pkgdir}/app/Browser.nsp"
+}
+md5sums=('33131e3c91c0c1342089d4fd0c02d58c')
