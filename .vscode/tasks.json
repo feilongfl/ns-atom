@@ -20,6 +20,15 @@
                 "cwd": "${fileDirname}"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "update current",
+            "type": "shell",
+            "command": "${workspaceFolder}/utils/update.sh ${file}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": []
         }
     ]
 }
