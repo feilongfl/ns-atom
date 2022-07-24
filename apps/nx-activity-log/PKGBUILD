@@ -3,8 +3,9 @@ pkgname=("nx-activity-log")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=1.4.0
 pkgrel=1
+github=tallbl0nde/NX-Activity-Log
 source=(
-        "nx-activity-log.nro::https://github.com/tallbl0nde/NX-Activity-Log/releases/download/v1.4.0/NX-Activity-Log.nro"
+        "nx-activity-log.nro::https://github.com/${github}/releases/download/v${pkgver}/NX-Activity-Log.nro"
 )
 arch=("any")
 

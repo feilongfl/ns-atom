@@ -1,10 +1,11 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("telsa-menu")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.1.4
+pkgver=1.2.0
 pkgrel=1
+github=WerWolv/Tesla-Menu
 source=(
-        "telsamenu.zip::https://github.com/WerWolv/Tesla-Menu/releases/download/v1.1.4/ovlmenu.zip"
+        "telsamenu.zip::https://github.com/${github}/releases/download/v${pkgver}/ovlmenu.zip"
 )
 arch=("any")
 

@@ -3,8 +3,9 @@ pkgname=("aio-switch-updater")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=2.19.2
 pkgrel=1
+github=HamletDuFromage/aio-switch-updater
 source=(
-      "aio-switch-updater.zip::https://github.com/HamletDuFromage/aio-switch-updater/releases/download/${pkgver}/aio-switch-updater.zip"
+      "aio-switch-updater.zip::https://github.com/${github}/releases/download/${pkgver}/aio-switch-updater.zip"
 )
 arch=("any")
 

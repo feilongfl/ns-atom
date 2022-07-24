@@ -3,8 +3,10 @@ pkgname=("browserNX")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=0.4.1
 pkgrel=1
+github=crc-32/BrowseNX
+github_ignore=y
 source=(
-      "browserNX.zip::https://github.com/crc-32/BrowseNX/releases/download/v0.4.1/BrowseNX.zip"
+      "browserNX.zip::https://github.com/${github}/releases/download/v${pkgver}/BrowseNX.zip"
 )
 arch=("any")
 

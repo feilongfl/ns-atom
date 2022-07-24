@@ -3,8 +3,9 @@ pkgname=("ftpd")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=3.1.0
 pkgrel=1
+github=mtheall/ftpd
 source=(
-      "ftpd.nro.xz::https://github.com/mtheall/ftpd/releases/download/v3.1.0/ftpd.nro.xz"
+      "ftpd.nro.xz::https://github.com/${github}/releases/download/v${pkgver}/ftpd.nro.xz"
 )
 arch=("any")
 

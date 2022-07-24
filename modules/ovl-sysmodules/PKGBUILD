@@ -3,8 +3,9 @@ pkgname=("ovl-sysmodules")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=1.2.2
 pkgrel=1
+github=WerWolv/ovl-sysmodules
 source=(
-        "ovlSysmodules.ovl::https://github.com/WerWolv/ovl-sysmodules/releases/download/v1.2.2/ovlSysmodules.ovl"
+        "ovlSysmodules.ovl::https://github.com/${github}/releases/download/v${pkgver}/ovlSysmodules.ovl"
 )
 arch=("any")
 

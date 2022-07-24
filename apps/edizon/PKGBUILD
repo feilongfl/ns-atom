@@ -3,9 +3,10 @@ pkgname=("edizon")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=3.1.0
 pkgrel=1
+github=WerWolv/EdiZon
 source=(
-      "edizon.nro::https://github.com/WerWolv/EdiZon/releases/download/v3.1.0/EdiZon.nro"
-      "ovlEdiZon.ovl::https://github.com/WerWolv/EdiZon/releases/download/v3.1.0/ovlEdiZon.ovl"
+      "edizon.nro::https://github.com/${github}/releases/download/v${pkgver}/EdiZon.nro"
+      "ovlEdiZon.ovl::https://github.com/${github}/releases/download/v${pkgver}/ovlEdiZon.ovl"
 )
 arch=("any")
 

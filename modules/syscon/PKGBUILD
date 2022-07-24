@@ -3,8 +3,9 @@ pkgname=("syscon")
 pkgdesc="atomspheer for Nintendo Switch"
 pkgver=0.6.4
 pkgrel=1
+github=cathery/sys-con
 source=(
-        "syscon.zip::https://github.com/cathery/sys-con/releases/download/v0.6.4/sys-con-0.6.4.zip"
+        "syscon.zip::https://github.com/${github}/releases/download/v${pkgver}/sys-con-${pkgver}.zip"
 )
 arch=("any")
 
