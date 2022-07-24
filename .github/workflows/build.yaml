@@ -16,7 +16,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "${{ github.run_number }}.${{ github.run_attempt }}"
           prerelease: true
-          title: "Development Build"
+          title: "${{ github.run_number }}.${{ github.run_attempt }}"
           files: |
             out/*
             LICENSE
