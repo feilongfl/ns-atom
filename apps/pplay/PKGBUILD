@@ -1,0 +1,16 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("pplay")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=3.5
+pkgrel=1
+github=Cpasjuste/pplay
+github_ignore=y
+source=(
+    "pplay.zip::https://github.com/${github}/releases/download/v${pkgver}/pplay-${pkgver}_switch.zip"
+)
+arch=("any")
+
+package() {
+    install -Dm755 ${srcdir}/ ${pkgdir}/
+}
+md5sums=('8388959efeccbc3ab4f1eb2afbbf9a7c')
