@@ -8,8 +8,8 @@ OUTPUTPATH=${OUTPUTDIR}/${OUTPUTFILE}
 
 ${OUTPUTPATH}:
 	mkdir -p out
-	touch out/${OUTPUTFILE}
-	touch out/checksum.md5
+	echo 1 > out/${OUTPUTFILE}
+	echo 1 > out/checksum.md5
 
 # ${OUTPUTPATH}: pkgbuild
 # 	mkdir -p ${BUILDDIR}
