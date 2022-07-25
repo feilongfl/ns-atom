@@ -6,16 +6,16 @@ OUTPUTDIR=out
 OUTPUTFILE=nt-atom-v${VERSION}.zip
 OUTPUTPATH=${OUTPUTDIR}/${OUTPUTFILE}
 
-${OUTPUTPATH}:
-	mkdir -p out
-	echo 1 > out/${OUTPUTFILE}
-	echo 1 > out/checksum.md5
+# ${OUTPUTPATH}:
+# 	mkdir -p out
+# 	echo 1 > out/${OUTPUTFILE}
+# 	echo 1 > out/checksum.md5
 
-# ${OUTPUTPATH}: pkgbuild
-# 	mkdir -p ${BUILDDIR}
-# 	find . -name "*.zst" -exec bash -c 'tar --use-compress-program=unzstd -xvf {} -C ${BUILDDIR}' \;
-# 	7z a -tzip ${OUTPUTPATH} -w ${BUILDDIR}/.
-# 	md5sum ${OUTPUTPATH} >${OUTPUTDIR}/checksum.md5
+${OUTPUTPATH}: pkgbuild
+	mkdir -p ${BUILDDIR}
+	find . -name "*.zst" -exec bash -c 'tar --use-compress-program=unzstd -xvf {} -C ${BUILDDIR}' \;
+	7z a -tzip ${OUTPUTPATH} -w ${BUILDDIR}/.
+	md5sum ${OUTPUTPATH} >${OUTPUTDIR}/checksum.md5
 
 pkgbuild:
 	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && makepkg --config ${PKGCONF} && popd' \;
