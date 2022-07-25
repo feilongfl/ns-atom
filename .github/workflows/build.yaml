@@ -18,6 +18,6 @@ jobs:
           prerelease: true
           title: "v0.${{ github.run_number }}.${{ github.run_attempt }}"
           files: |
-            out/nt-atom-v${{ github.run_number }}.${{ github.run_attempt }}.zip
+            out/nt-atom-v0.${{ github.run_number }}.${{ github.run_attempt }}.zip
             out/checksum.md5
             LICENSE
