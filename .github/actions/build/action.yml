@@ -5,8 +5,12 @@ inputs:
   version:
     description: 'output version'
     required: true
+  target:
+    description: 'output version'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.version }}
+    - ${{ inputs.target }}

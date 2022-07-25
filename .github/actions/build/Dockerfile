@@ -2,7 +2,7 @@
 FROM alpine
 
 # Install dep
-RUN apk add alpine-sdk pacman-makepkg make p7zip zstd xz sudo
+RUN apk add alpine-sdk pacman-makepkg make p7zip zstd xz sudo jq
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
