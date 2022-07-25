@@ -10,13 +10,13 @@ jobs:
         id: build
         uses: ./.github/actions/build
         with:
-          version: '${{ github.run_number }}.${{ github.run_attempt }}'
+          version: '0.${{ github.run_number }}.${{ github.run_attempt }}'
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "${{ github.run_number }}.${{ github.run_attempt }}"
+          automatic_release_tag: "v0.${{ github.run_number }}.${{ github.run_attempt }}"
           prerelease: true
-          title: "${{ github.run_number }}.${{ github.run_attempt }}"
+          title: "v0.${{ github.run_number }}.${{ github.run_attempt }}"
           files: |
             out/nt-atom-v${{ github.run_number }}.${{ github.run_attempt }}.zip
             out/checksum.md5
