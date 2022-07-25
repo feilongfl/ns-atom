@@ -8,7 +8,7 @@ OUTPUTPATH=${OUTPUTDIR}/${OUTPUTFILE}
 
 ${OUTPUTPATH}:
 	mkdir -p out
-	touch out/nt-atom-v$1.zip
+	touch out/${OUTPUTFILE}
 	touch out/checksum.md5
 
 # ${OUTPUTPATH}: pkgbuild
