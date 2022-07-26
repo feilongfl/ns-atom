@@ -1,0 +1,15 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("hb-store")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=2.2
+pkgrel=1
+github=fortheusers/hb-appstore
+source=(
+      "appstore.nro::https://github.com/${github}/releases/download/${pkgver}/appstore.nro"
+)
+arch=("any")
+
+package() {
+	install -Dm755 "${srcdir}/appstore.nro" "${pkgdir}/switch/appstore/appstore.nro"
+}
+md5sums=('1cc07afe7afac2515c02c238fab3e8c1')
