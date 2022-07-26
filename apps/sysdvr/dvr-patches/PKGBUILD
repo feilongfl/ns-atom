@@ -1,0 +1,17 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("sysdvr")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=fw%2D14.0
+pkgrel=1
+github=exelix11/dvr-patches
+source=(
+    "dvr-patches.zip::https://github.com/${github}/releases/download/${pkgver}/dvr-patches.zip"
+)
+arch=("any")
+
+package() {
+    pushd ${srcdir}
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+    popd
+}
+md5sums=('ee1edfd2d381ab65d06797a1b4d2beed')
