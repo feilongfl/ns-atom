@@ -4,13 +4,13 @@ source $1
 
 if [ -z "${github}" ]
 then
-    echo "var github not set, exit..."
+    echo "$1: var github not set, exit..."
     exit
 fi
 
 if [ ! -z "${github_ignore}" ]
 then
-    echo "github ignore var is set, exit..."
+    echo "$1: github ignore var is set, exit..."
     exit
 fi
 
@@ -20,7 +20,7 @@ pkgver=$(curl -s ${url} | jq -r '.tag_name' | sed -e "s/^v//" -e "s/-/%2D/g")
 
 if [ "${pkgver}" = "null" ]
 then
-    echo "pkgver get failed, exit..."
+    echo "$1: pkgver get failed, exit..."
     exit
 fi
 
