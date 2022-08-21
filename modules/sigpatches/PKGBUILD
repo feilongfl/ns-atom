@@ -1,11 +1,10 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("sigpatches")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=14.1.0%2D1.3.2
+pkgver=14.1.2
 pkgrel=1
-github=ITotalJustice/patches
 source=(
-        "fusee.zip::https://github.com/${github}/releases/download/${pkgver}/SigPatches.zip"
+        "fusee.zip::https://sigmapatches.coomer.party/sigpatches.zip"
 )
 arch=("any")
 
