@@ -1,0 +1,17 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("wiliwili")
+pkgdesc="Bilibili for Nintendo Switch"
+pkgver=0.3.0
+pkgrel=1
+github=xfangfang/wiliwili
+source=(
+    "wiliwili.zip::https://github.com/${github}/releases/download/v${pkgver}/wiliwili-2022-09-02.zip"
+)
+arch=("any")
+
+package() {
+    pushd ${srcdir}
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+    popd
+}
+md5sums=('20c1be149a4b4d6242ca435a562df983')
