@@ -2,16 +2,17 @@
 pkgname=("wiliwili")
 pkgdesc="Bilibili for Nintendo Switch"
 pkgver=0.3.0
+pkgver2=2022-09-02
 pkgrel=1
 github=xfangfang/wiliwili
 source=(
-    "wiliwili.zip::https://github.com/${github}/releases/download/v${pkgver}/wiliwili-2022-09-02.zip"
+  "wiliwili.zip::https://github.com/${github}/releases/download/v${pkgver}/wiliwili-${pkgver2}.zip"
 )
 arch=("any")
 
 package() {
-    pushd ${srcdir}
-      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
-    popd
+  install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili.nro ${pkgdir}/switch/wiliwili.nro
+  install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/bilibili_010ff000ffff0001.nsp ${pkgdir}/apps/bilibili_010ff000ffff0001.nsp
+  install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/wiliwili_010ff000ffff0002.nsp ${pkgdir}/apps/wiliwili_010ff000ffff0002.nsp
 }
 md5sums=('20c1be149a4b4d6242ca435a562df983')
