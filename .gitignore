@@ -5,6 +5,7 @@ src
 /build
 /out
 *.nro
+*.nsp
 *.xz
 *.ovl
 *.part
