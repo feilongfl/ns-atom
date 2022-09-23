@@ -10,7 +10,8 @@ source=(
 arch=("any")
 
 package() {
-    pushd ${srcdir}
+    unzip -od ${srcdir}/sysdvr ${srcdir}/SysDVR.zip
+    pushd ${srcdir}/sysdvr
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
     popd
 }
