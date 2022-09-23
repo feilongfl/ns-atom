@@ -12,7 +12,7 @@ arch=("any")
 
 package() {
   install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili.nro ${pkgdir}/switch/wiliwili.nro
-  install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/bilibili_010ff000ffff0001.nsp ${pkgdir}/apps/bilibili_010ff000ffff0001.nsp
-  install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/wiliwili_010ff000ffff0002.nsp ${pkgdir}/apps/wiliwili_010ff000ffff0002.nsp
+  # install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/bilibili_010ff000ffff0001.nsp ${pkgdir}/apps/bilibili_010ff000ffff0001.nsp
+  # install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/wiliwili_010ff000ffff0002.nsp ${pkgdir}/apps/wiliwili_010ff000ffff0002.nsp
 }
 md5sums=('9bc7bbcf74b56039d192e9fd04826bec')
