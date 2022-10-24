@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("ovl-sysmodules")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.2.2
+pkgver=1.3.0
 pkgrel=1
 github=WerWolv/ovl-sysmodules
 source=(
@@ -12,4 +12,4 @@ arch=("any")
 package() {
     install -Dm755 "${srcdir}/ovlSysmodules.ovl" "${pkgdir}/switch/.overlays/ovlSysmodules.ovl"
 }
-md5sums=('3b10f3aba72d6e6dc5897aed7cc94e4c')
+md5sums=('436390d845035324289b4d16b93b0697')
