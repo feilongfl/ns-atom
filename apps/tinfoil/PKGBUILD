@@ -1,10 +1,10 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("tinfoil")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.3.4
+pkgver=15.0
 pkgrel=1
 source=(
-      "tinfoil.zip::https://tinfoil.media/repo/Tinfoil%20Self%20Installer%20%5B050000BADDAD0000%5D%5B14.0%5D%5Bv0%5D.zip"
+      "tinfoil.zip::https://tinfoil.media/repo/Tinfoil%20Self%20Installer%20%5B050000BADDAD0000%5D%5B15.0%5D%5Bv10%5D.zip"
 )
 arch=("any")
 
