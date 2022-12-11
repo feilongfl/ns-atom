@@ -1,4 +1,8 @@
-on: [push]
+on:
+  push:
+    branches:
+      - master
+      - autoup
 
 jobs:
   build_job:
@@ -10,7 +14,7 @@ jobs:
         id: build
         uses: ./.github/actions/build
         with:
-          version: '0.${{ github.run_number }}.${{ github.run_attempt }}'
+          version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"

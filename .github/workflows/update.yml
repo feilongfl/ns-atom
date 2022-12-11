@@ -1,4 +1,15 @@
-on: workflow_dispatch
+on:
+  # run automatically in sunday
+  schedule:
+    - cron: "0 * * * 0"
+
+  # allows to manually run the job at any time
+  workflow_dispatch:
+
+  # run on every push on the master branch
+  push:
+    branches:
+      - dev
 
 jobs:
   build_job:
@@ -6,9 +17,20 @@ jobs:
     name: build pkg
     steps:
       - uses: actions/checkout@v3
-      - name: build pkg
-        id: build
-        uses: ./.github/actions/build
+      # - name: build pkg
+      #   id: build
+      #   uses: ./.github/actions/build
+      #   with:
+      #     version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
+      #     target: "update"
+      - name: Commit files
+        run: |
+          date > auto_update_time.txt
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git commit -a -m "Bot: Auto Update Packages."
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
-          target: "update"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: autoup
