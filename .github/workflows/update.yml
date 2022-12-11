@@ -26,10 +26,10 @@ jobs:
       - name: Commit files
         run: |
           ls -la
-          date > auto_update_time.txt
+          date | sudo -u nobody tee auto_update_time.txt
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git commit -a -m "Bot: Auto Update Packages."
+          sudo -u nobody git commit -a -m "Bot: Auto Update Packages."
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
