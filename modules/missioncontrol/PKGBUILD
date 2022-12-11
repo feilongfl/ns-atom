@@ -5,7 +5,7 @@ pkgver=0.8.0
 pkgrel=1
 github=ndeadly/MissionControl
 github_assert_jqmatcher=".assets[0].name"
-github_assert=MissionControl-0.8.0-prerelease-8129c36.zip
+github_assert=MissionControl-0.8.0-master-64f978e.zip
 source=(
       "missioncontrol.zip::https://github.com/${github}/releases/download/v${pkgver}/${github_assert}"
 )
@@ -16,4 +16,4 @@ package() {
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
       popd
 }
-md5sums=('826476e304cd1107071ea1204036f001')
+md5sums=('06918a612a89b82b1d4bd0d3f45a923c')
