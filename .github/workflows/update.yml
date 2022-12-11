@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: update pkg
-        id: build
+        id: update
         uses: ./.github/actions/build
         with:
           version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
