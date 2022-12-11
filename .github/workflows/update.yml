@@ -17,12 +17,12 @@ jobs:
     name: build pkg
     steps:
       - uses: actions/checkout@v3
-      # - name: build pkg
-      #   id: build
-      #   uses: ./.github/actions/build
-      #   with:
-      #     version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
-      #     target: "update"
+      - name: build pkg
+        id: build
+        uses: ./.github/actions/build
+        with:
+          version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
+          target: "update"
       - name: Commit files
         run: |
           date > auto_update_time.txt
