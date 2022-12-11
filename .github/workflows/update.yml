@@ -18,12 +18,27 @@ jobs:
     name: build pkg
     steps:
       - uses: actions/checkout@v3
-      - name: build pkg
+      - name: update pkg
         id: build
         uses: ./.github/actions/build
         with:
           version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
           target: "update"
+      - name: build pkg
+        id: build
+        uses: ./.github/actions/build
+        with:
+          version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "v0.${{ github.run_number }}.${{ github.run_attempt }}"
+          prerelease: true
+          title: "v0.${{ github.run_number }}.${{ github.run_attempt }}"
+          files: |
+            out/nt-atom-v0.${{ github.run_number }}.${{ github.run_attempt }}.zip
+            out/checksum.md5
+            LICENSE
       - name: Commit files
         run: |
           ls -la
