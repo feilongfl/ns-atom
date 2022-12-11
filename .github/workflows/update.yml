@@ -32,8 +32,7 @@ jobs:
           sudo git config --local user.name "github-actions[bot]"
           sudo git commit -a -m "Bot: Auto Update Packages."
           sudo git remote add github https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          sudo echo git push github ${GITHUB_BASE_REF}:autoup
-          sudo git push github ${{ env.BRANCH_NAME }}:autoup
+          sudo git push github $(git branch --show-current):autoup
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
       #   with:
