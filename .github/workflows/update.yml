@@ -1,4 +1,4 @@
-on: [push]
+on: workflow_dispatch
 
 jobs:
   build_job:
@@ -10,6 +10,5 @@ jobs:
         id: build
         uses: ./.github/actions/build
         with:
-          version: '0.${{ github.run_number }}.${{ github.run_attempt }}'
-          target: 'update'
-          
+          version: "0.${{ github.run_number }}.${{ github.run_attempt }}"
+          target: "update"
