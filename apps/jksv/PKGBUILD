@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("jksv")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=09%2F01%2F2021
+pkgver=02%2F23%2F2023
 pkgrel=1
 github=J-D-K/JKSV
 github_ignore=y
@@ -13,4 +13,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/jksv.nro" "${pkgdir}/switch/jksv.nro"
 }
-md5sums=('abca63f4706bd990d7ff8d7535508fab')
+md5sums=('31a2cae53f05de39a0a73af550683abb')
