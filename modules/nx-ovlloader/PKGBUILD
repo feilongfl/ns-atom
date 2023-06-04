@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("nx-ovlloader")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.0.6
+pkgver=1.0.7
 pkgrel=1
 github=WerWolv/nx-ovlloader
 source=(
@@ -14,4 +14,4 @@ package() {
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
       popd
 }
-md5sums=('d2cb39faa263f68e3128dea946945f97')
+md5sums=('9a37a807c5612d8ceb33d3174a883806')

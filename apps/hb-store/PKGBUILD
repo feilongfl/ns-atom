@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("hb-store")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=2.2
+pkgver=2.3.2
 pkgrel=1
 github=fortheusers/hb-appstore
 source=(

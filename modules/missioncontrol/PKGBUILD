@@ -1,11 +1,11 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("missioncontrol")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=0.8.0
+pkgver=0.9.2
 pkgrel=1
 github=ndeadly/MissionControl
 github_assert_jqmatcher=".assets[0].name"
-github_assert=MissionControl-0.8.0-master-64f978e.zip
+github_assert=MissionControl-0.9.2-master-fe31665.zip
 source=(
       "missioncontrol.zip::https://github.com/${github}/releases/download/v${pkgver}/${github_assert}"
 )
@@ -16,4 +16,4 @@ package() {
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
       popd
 }
-md5sums=('06918a612a89b82b1d4bd0d3f45a923c')
+md5sums=('09daf7670fb65d71796ab69430092e89')
