@@ -5,7 +5,7 @@ pkgver=2.3.2
 pkgrel=1
 github=fortheusers/hb-appstore
 source=(
-      "appstore.nro::https://github.com/${github}/releases/download/${pkgver}/appstore.nro"
+      "appstore.nro::https://github.com/${github}/releases/download/v${pkgver}/appstore.nro"
 )
 arch=("any")
 
