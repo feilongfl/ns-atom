@@ -15,7 +15,7 @@ ${OUTPUTPATH}: pkgreports
 	md5sum ${OUTPUTPATH} >${OUTPUTDIR}/checksum.md5
 
 pkgbuild:
-	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && echo failed > status && makepkg --config ${PKGCONF} && cat ${PKGCONF} | grep "^pkgver" | cut -d '=' -f 2 > status && popd' \;
+	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && echo failed > status && makepkg -f --config ${PKGCONF} && cat PKGBUILD | grep "^pkgver" | cut -d '=' -f 2 > status && popd' \;
 
 updpkgsums:
 	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && updpkgsums && popd' \;
