@@ -1,0 +1,15 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("Amiigo")
+pkgdesc="atomspheer for Nintendo Switch"
+pkgver=2.3.2
+pkgrel=1
+github=CompSciOrBust/Amiigo
+source=(
+      "Amiigo.nro::https://github.com/${github}/releases/download/${pkgver}/Amiigo.nro"
+)
+arch=("any")
+
+package() {
+      install -Dm755 "${srcdir}/Amiigo.nro" "${pkgdir}/switch/appstore/Amiigo.nro"
+}
+md5sums=('0e7751d9e43f1782109c7c66968f1c08')
