@@ -15,7 +15,7 @@ ${OUTPUTPATH}: pkgreports
 	md5sum ${OUTPUTPATH} >${OUTPUTDIR}/checksum.md5
 
 pkgbuild:
-	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && echo failed > status && makepkg -f --config ${PKGCONF} && cat PKGBUILD | grep "^pkgver" | cut -d '=' -f 2 > status && popd' \;
+	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && echo ❌ > status && makepkg -f --config ${PKGCONF} && cat PKGBUILD | grep "^pkgver" | cut -d '=' -f 2 > status && popd' \;
 
 updpkgsums:
 	find . -name "PKGBUILD" -exec bash -c 'pushd `dirname {}` && updpkgsums && popd' \;
@@ -26,7 +26,7 @@ update_github:
 update: update_github updpkgsums
 
 pkgreports: pkgbuild
-	find . -name "status" -exec bash -c 'pushd `dirname {}` && echo "| "`pwd`" | "`cat status`" |" >> ${TOPDIR}/readme.md && popd' \;
+	find . -name "status" -exec bash -c 'pushd `dirname {}` && echo "| ["`dirname {}`"]("`dirname {}`/PKGBUILD") | "`cat status`" |" >> ${TOPDIR}/readme.md && popd' \;
 
 clean:
 	git clean -xfd

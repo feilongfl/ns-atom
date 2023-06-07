@@ -10,5 +10,5 @@
 
 > auto generate area
 
-| package | status |
+| package | version |
 | --- | --- |
