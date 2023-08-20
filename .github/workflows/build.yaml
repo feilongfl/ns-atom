@@ -10,6 +10,8 @@ jobs:
     name: build pkg
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: main
       - name: build pkg
         id: build
         uses: ./.github/actions/build
