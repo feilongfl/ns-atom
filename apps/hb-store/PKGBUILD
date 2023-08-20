@@ -12,4 +12,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/appstore.nro" "${pkgdir}/switch/appstore/appstore.nro"
 }
-md5sums=('1cc07afe7afac2515c02c238fab3e8c1')
+md5sums=('2d30a447d2f10768d34418767b3b4dde')
