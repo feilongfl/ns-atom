@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("moonlight")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=0.13.4
+pkgver=1.0.0
 pkgrel=1
 github=XITRIX/Moonlight-Switch
 source=(
@@ -12,4 +12,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/Moonlight-Switch.nro" "${pkgdir}/switch/Moonlight-Switch.nro"
 }
-md5sums=('98b2c3763f783076467e83d56c13c1ca')
+md5sums=('7dc0cdc4c7ee2ed8b9c7a532605738d9')
