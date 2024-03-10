@@ -12,4 +12,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/switch/aio-switch-updater/aio-switch-updater.nro" "${pkgdir}/switch/aio-switch-updater/aio-switch-updater.nro"
 }
-md5sums=('15599fc07cc44bee90bcd7f33b3273ea')
+md5sums=('1c46880e4b49657f057aaaffacd38e84')

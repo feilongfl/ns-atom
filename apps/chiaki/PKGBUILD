@@ -11,4 +11,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/chiaki.nro" "${pkgdir}/switch/chiaki.nro"
 }
-md5sums=('6b591f1e1ef085f3424b0146cb154e33')
+md5sums=('a89ee25abbe99285fea012e262795c83')

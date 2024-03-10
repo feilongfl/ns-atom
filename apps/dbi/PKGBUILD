@@ -12,4 +12,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/dbi.nro" "${pkgdir}/switch/dbi.nro"
 }
-md5sums=('6d65feba3e6a430c3916631a8af0d70f')
+md5sums=('2befd879b53e214bf948a003d4140ebc')
