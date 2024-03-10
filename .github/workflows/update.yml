@@ -18,6 +18,8 @@ jobs:
     name: update and build pkg
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: main
       - name: update pkg
         id: update
         uses: ./.github/actions/build
