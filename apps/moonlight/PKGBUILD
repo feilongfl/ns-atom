@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("moonlight")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=0.12.1
+pkgver=1.0.0
 pkgrel=1
 github=XITRIX/Moonlight-Switch
 source=(

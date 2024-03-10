@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("sysdvr")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=fw%2D16.0
+pkgver=fw%2D17.0%2Dfix
 pkgrel=1
 github=exelix11/dvr-patches
 source=(

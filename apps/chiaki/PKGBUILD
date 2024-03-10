@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("chiaki")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=2.1.1
+pkgver=2.2.0
 pkgrel=1
 source=(
       "chiaki.zip::https://git.sr.ht/~thestr4ng3r/chiaki/refs/download/v${pkgver}/Chiaki-v${pkgver}-Switch.zip"
