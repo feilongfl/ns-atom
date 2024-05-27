@@ -2,7 +2,7 @@
 FROM alpine
 
 # Install dep
-RUN apk add alpine-sdk pacman-makepkg make p7zip zstd xz sudo jq autoconf automake libarchive-dev pacman-dev asciidoc
+RUN apk add alpine-sdk pacman-makepkg make p7zip zstd xz sudo jq autoconf automake libarchive-dev pacman-dev asciidoc curl
 
 # Compile Pacman Contrib
 RUN git clone https://gitlab.archlinux.org/pacman/pacman-contrib.git /tmp/pacman-contrib
