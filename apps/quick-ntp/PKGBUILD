@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("QuickNTP")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.2.8
+pkgver=1.2.8%2D1
 pkgrel=1
 github=nedex/QuickNTP
 source=(
