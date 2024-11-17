@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("ftpd")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=3.1.0
+pkgver=3.2.0
 pkgrel=1
 github=mtheall/ftpd
 source=(
