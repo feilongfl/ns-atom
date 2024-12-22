@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("wiliwili")
 pkgdesc="Bilibili for Nintendo Switch"
-pkgver=1.4.0
+pkgver=1.5.0
 pkgver2=2022-11-20
 pkgrel=1
 github=xfangfang/wiliwili
@@ -15,4 +15,4 @@ package() {
   # install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/bilibili_010ff000ffff0001.nsp ${pkgdir}/apps/bilibili_010ff000ffff0001.nsp
   # install -Dm755 ${SRCPKGDEST}/src/wiliwili-${pkgver2}/wiliwili-nsp-forwarder/wiliwili_010ff000ffff0002.nsp ${pkgdir}/apps/wiliwili_010ff000ffff0002.nsp
 }
-md5sums=('f122220b33b7e0564f7a6da2d3f55fb8')
+md5sums=('111bf485c94cc4b778f3b3e21b9d40d7')
