@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("sysdvr")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=fw%2D18.0
+pkgver=fw%2D19.0.1
 pkgrel=1
 github=exelix11/dvr-patches
 source=(
@@ -14,4 +14,4 @@ package() {
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
     popd
 }
-md5sums=('35b1f48bd82b2ac629d9ef22e1d2dc92')
+md5sums=('9cbbccf29cd4c9a030161ce8fb40369e')

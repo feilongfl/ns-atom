@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("syscon")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=0.6.4
+pkgver=0.6.5
 pkgrel=1
 github=cathery/sys-con
 source=(
@@ -14,4 +14,4 @@ package() {
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
     popd
 }
-md5sums=('69f275ecffddb063f6de2094f8a45d44')
+md5sums=('acda455666026cc8569fd6860e7016b3')
