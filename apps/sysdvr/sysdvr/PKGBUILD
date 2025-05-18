@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("sysdvr")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=6.1.1
+pkgver=6.2.1
 pkgrel=1
 github=exelix11/SysDVR
 source=(
@@ -15,4 +15,4 @@ package() {
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
     popd
 }
-md5sums=('c456f5a62e657f058f6a0c28b0f86f4c')
+md5sums=('f96d7e7230e0438b1d203ddb557098e5')
