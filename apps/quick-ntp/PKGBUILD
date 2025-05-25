@@ -5,11 +5,11 @@ pkgver=1.2.8%2D1
 pkgrel=1
 github=nedex/QuickNTP
 source=(
-    "QuickNTP.ovl::https://github.com/${github}/releases/download/${pkgver}/QuickNTP.ovl"
+    "QuickNTP.zip::https://github.com/${github}/releases/download/${pkgver}/quickntp-${pkgver}.zip"
 )
 arch=("any")
 
 package() {
     install -Dm755 ${srcdir}/QuickNTP.ovl ${pkgdir}/switch/.overlays/QuickNTP.ovl
 }
-md5sums=('866d155b3758cf89c9602d569449092b')
+md5sums=('823b551ba36581719bb77a51172a18ff')

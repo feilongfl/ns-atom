@@ -1,0 +1,16 @@
+# Maintainer: FeiLong <feilongphone@gmail.com>
+pkgname=("sys-patch")
+pkgdesc="A script-like system module that patches fs, es, ldr and nifm on boot"
+pkgver=1.5.6
+pkgrel=1
+source=(
+        "fusee.zip::https://github.com/impeeza/sys-patch/releases/download/v${pkgver}/sys-patch.zip"
+)
+arch=("any")
+
+package() {
+    pushd ${srcdir}
+      find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
+    popd
+}
+md5sums=('6135fd1f053ced280ac9a834b03cb494')
