@@ -15,4 +15,4 @@ package() {
 
       install -Dm755 ${SRCPKGDEST}/tinfoil-locations.conf ${pkgdir}/switch/tinfoil/locations.conf
 }
-md5sums=('64a51368b5f9c6d42a2a11b60d9a3aa0')
+md5sums=('866f242db9471b9312eadc5407f0fc17')
