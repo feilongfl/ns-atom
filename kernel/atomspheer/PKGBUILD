@@ -1,11 +1,11 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("atomspheer")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.8.0%2Dprerelease
+pkgver=1.9.3
 pkgrel=1
 github=Atmosphere-NX/Atmosphere
 github_assert_jqmatcher=".assets[0].name"
-github_assert=atmosphere-1.8.0-master-c6014b533+hbl-2.4.4+hbmenu-3.6.0.zip
+github_assert=atmosphere-1.9.3-master-8b8e4438e+hbl-2.4.4+hbmenu-3.6.0.zip
 source=(
       "atomspheer.zip::https://github.com/${github}/releases/download/${pkgver}/${github_assert}"
 )
@@ -29,4 +29,4 @@ package() {
 	# patch hosts
 	install -Dm755 "${SRCPKGDEST}/hosts.txt" "${pkgdir}/atmosphere/hosts/default.txt"
 }
-md5sums=('14e721d29ea18b23440ac55814a6862f')
+md5sums=('ab897d7bb8fc0751fac875d2329b494d')
