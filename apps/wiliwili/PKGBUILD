@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("wiliwili")
 pkgdesc="Bilibili for Nintendo Switch"
-pkgver=1.5.1
+pkgver=1.5.2
 pkgrel=1
 github=xfangfang/wiliwili
 source=(
@@ -12,4 +12,4 @@ arch=("any")
 package() {
   install -Dm755 ${SRCPKGDEST}/src/wiliwili/wiliwili.nro ${pkgdir}/switch/wiliwili.nro
 }
-md5sums=('74ceb707fc9e18fb98e436b92805cd98')
+md5sums=('8ae4e61054783123d47e1928eb198cca')
