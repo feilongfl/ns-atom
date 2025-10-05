@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("RipJKAnimeNX")
 pkgdesc="Esta Aplicación es para Ver Online y Descargar Anime a través de la Nintendo Switch."
-pkgver=2.9.0
+pkgver=2.9.8
 pkgrel=1
 github=darkxex/RipJKAnimeNX
 source=(
@@ -14,5 +14,5 @@ package() {
 	install -Dm755 "${srcdir}/RipJKAnimeNX.nro" "${pkgdir}/switch/RipJKAnimeNX.nro"
 	install -Dm755 "${srcdir}/RipJKAnimeNX.05B9DB505ABBE000.v0.nsp" "${pkgdir}/apps/RipJKAnimeNX.05B9DB505ABBE000.v0.nsp"
 }
-md5sums=('344fde717f5222294914a2c644a108fc'
-         'f9f21c4db755446e7506da338be4849e')
+md5sums=('ef2bf8f11a2a48ee84833cd4f7168ea9'
+         '5587461bf2006e7502a366ba7f7cebd1')
