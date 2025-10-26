@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("QuickNTP")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.2.8%2D1
+pkgver=1.5.1
 pkgrel=1
 github=nedex/QuickNTP
 source=(
@@ -12,4 +12,4 @@ arch=("any")
 package() {
     install -Dm755 ${srcdir}/QuickNTP.ovl ${pkgdir}/switch/.overlays/QuickNTP.ovl
 }
-md5sums=('823b551ba36581719bb77a51172a18ff')
+md5sums=('d5d9b7203ed216946563e92b3889a33c')
