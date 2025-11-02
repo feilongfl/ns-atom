@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("dbi")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=788ru
+pkgver=831ru
 pkgrel=1
 github=rashevskyv/dbi
 source=(
@@ -12,4 +12,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/dbi.nro" "${pkgdir}/switch/dbi.nro"
 }
-md5sums=('a5bec6c6b11d1ae72eb272af635c60bb')
+md5sums=('32225d1aaf015dc947f6de75bce489a1')
