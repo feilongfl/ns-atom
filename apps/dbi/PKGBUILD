@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("dbi")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=788ru
+pkgver=849ru
 pkgrel=1
 github=rashevskyv/dbi
 source=(

@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("ldn_mitm")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.17.0
+pkgver=1.23.0
 pkgrel=1
 github=spacemeowx2/ldn_mitm
 source=(

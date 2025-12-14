@@ -12,4 +12,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/ftpd.nro" "${pkgdir}/switch/ftpd.nro"
 }
-md5sums=('c7c11350e75c022435f8f3781fd41381')
+md5sums=('28d6f7c9d931532e4f1ab11419cd23a8')
