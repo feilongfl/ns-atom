@@ -1,0 +1,24 @@
+{
+  "name": "ns-atom (alpine + makepkg)",
+  "build": {
+    "dockerfile": "../.github/actions/build/Dockerfile"
+  },
+  "workspaceFolder": "/workspaces/ns-atom",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/ns-atom,type=bind",
+  "runArgs": [
+    "--privileged"
+  ],
+  "remoteUser": "root",
+  "containerEnv": {
+    "MAKEPKG_CONF": "/etc/makepkg.conf"
+  },
+  "postCreateCommand": "echo 'devcontainer ready: alpine + makepkg'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "tamasfe.even-better-toml",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+}
