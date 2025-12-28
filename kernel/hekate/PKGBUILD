@@ -26,4 +26,4 @@ package() {
 	install -Dm755 "${SRCPKGDEST}/sx_gear/boot.dat" "${pkgdir}/boot.dat"
 	install -Dm755 "${SRCPKGDEST}/sx_gear/boot.ini" "${pkgdir}/boot.ini"
 }
-md5sums=('5e4a927e23bea806d188a57ea6718a71')
+md5sums=('571b055739d28c29eea269326e92b9d7')
