@@ -29,4 +29,4 @@ package() {
 	# patch hosts
 	install -Dm755 "${SRCPKGDEST}/hosts.txt" "${pkgdir}/atmosphere/hosts/default.txt"
 }
-md5sums=('14e721d29ea18b23440ac55814a6862f')
+md5sums=('39f93a36e61ed48ff05dd769cbd9666a')
