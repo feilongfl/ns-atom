@@ -1,11 +1,11 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=hekate_ctcaer
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=6.4.2
+pkgver=6.5.1
 pkgrel=1
 github=CTCaer/hekate
 github_assert_jqmatcher=".assets[1].name"
-github_assert=hekate_ctcaer_6.4.2_Nyx_1.8.2.zip
+github_assert=hekate_ctcaer_6.5.1_Nyx_1.9.1.zip
 source=(
       "hekate_ctcaer_Nyx.zip::https://github.com/${github}/releases/download/v${pkgver}/${github_assert}"
 )
@@ -26,4 +26,4 @@ package() {
 	install -Dm755 "${SRCPKGDEST}/sx_gear/boot.dat" "${pkgdir}/boot.dat"
 	install -Dm755 "${SRCPKGDEST}/sx_gear/boot.ini" "${pkgdir}/boot.ini"
 }
-md5sums=('5e4a927e23bea806d188a57ea6718a71')
+md5sums=('14c02f42da3b7659a269aeb4932933c9')

@@ -12,4 +12,4 @@ arch=("any")
 package() {
   install -Dm755 ${SRCPKGDEST}/src/wiliwili/wiliwili.nro ${pkgdir}/switch/wiliwili.nro
 }
-md5sums=('74ceb707fc9e18fb98e436b92805cd98')
+md5sums=('7ce4b46b85d7d0f8b8e8d952740b3e6e')
