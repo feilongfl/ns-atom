@@ -14,5 +14,5 @@ package() {
 	install -Dm755 "${srcdir}/RipJKAnimeNX.nro" "${pkgdir}/switch/RipJKAnimeNX.nro"
 	install -Dm755 "${srcdir}/RipJKAnimeNX.05B9DB505ABBE000.v0.nsp" "${pkgdir}/apps/RipJKAnimeNX.05B9DB505ABBE000.v0.nsp"
 }
-md5sums=('344fde717f5222294914a2c644a108fc'
-         'f9f21c4db755446e7506da338be4849e')
+md5sums=('0f46f930266f5cd9048890879aa63740'
+         '04e014f2e463698e14459c6a8672f970')
