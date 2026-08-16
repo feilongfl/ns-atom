@@ -14,4 +14,4 @@ package() {
       find -type f -exec install -Dm 755 "{}" "${pkgdir}/{}" \;
       popd
 }
-md5sums=('748659a81e8cf80466b856a80b961028')
+md5sums=('f86ea44ce70e9f351aab990ad3d87bb9')
