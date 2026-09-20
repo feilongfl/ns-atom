@@ -12,4 +12,4 @@ arch=("any")
 package() {
 	install -Dm755 "${srcdir}/switch/Awoo-Installer/Awoo-Installer.nro" "${pkgdir}/switch/Awoo-Installer/Awoo-Installer.nro"
 }
-md5sums=('048cba34de0ae906f9d0420890a7a535')
+md5sums=('e706886cd2f71105a938ad47fa0b0a0d')
