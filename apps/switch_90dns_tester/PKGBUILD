@@ -1,7 +1,7 @@
 # Maintainer: FeiLong <feilongphone@gmail.com>
 pkgname=("switch_90dns_tester")
 pkgdesc="atomspheer for Nintendo Switch"
-pkgver=1.0.4
+pkgver=1.1.0
 pkgrel=1
 github=meganukebmp/Switch_90DNS_tester
 source=(
@@ -12,4 +12,4 @@ arch=("any")
 package() {
     install -Dm755 ${srcdir}/switch_90dns_tester.nro ${pkgdir}/switch/switch_90dns_tester.nro
 }
-md5sums=('8981701cecd87e00ad256c025848952d')
+md5sums=('180cebfc9699d32dc13e3e498c4c74f2')
